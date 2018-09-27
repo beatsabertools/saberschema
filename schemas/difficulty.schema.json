@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/difficulty.schema.json",
+    "title": "Beat Saber Difficulty",
+    "description": "Difficulty details for a song and beatmap",
+    "type": "object",
+    "properties": {
+        "difficulty": {
+            "description": "Level of difficulty (description; should align with difficultyRank)",
+            "type": "string",
+            "anyOf": [
+                {
+                    "description": "Easy difficulty",
+                    "const": "Easy"
+                },
+                {
+                    "description": "Normal difficulty",
+                    "const": "Normal"
+                },
+                {
+                    "description": "Hard difficulty",
+                    "const": "Hard"
+                },
+                {
+                    "description": "Expert difficulty",
+                    "const": "Expert"
+                },
+                {
+                    "description": "Expert+ difficulty",
+                    "const": "Expert+"
+                }
+            ]
+        },
+        "difficultyRank": {
+            "description": "Level of difficulty (numeric rank; should align with difficulty)",
+            "type": "integer",
+            "anyOf": [
+                {
+                    "description": "Easy rank",
+                    "const": 0
+                },
+                {
+                    "description": "Normal rank",
+                    "const": 1
+                },
+                {
+                    "description": "Hard rank",
+                    "const": 2
+                },
+                {
+                    "description": "Expert rank",
+                    "const": 3
+                },
+                {
+                    "description": "Expert+ rank",
+                    "const": 4
+                }
+            ]
+        },
+        "jsonPath": {
+            "description": "Path to beatmap definition file",
+            "type": "string"
+        }
+    },
+    "required": [
+        "difficulty",
+        "difficultyRank",
+        "jsonPath"
+    ]
+}

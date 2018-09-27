@@ -1,0 +1,68 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/beatmap.schema.json",
+    "title": "Beat Saber Beatmap",
+    "description": "A beatmap definition for a song at a particular difficulty",
+    "type": "object",
+    "properties": {
+        "_version": {
+            "description": "Version of Beat Saber song map specification",
+            "type": "number"
+        },
+        "_beatsPerMinute": {
+            "description": "Song's Beats Per Minute (BPM)",
+            "type": "number",
+            "minimum": 0
+        },
+        "_beatsPerBar": {
+            "description": "FIXME",
+            "type": "number",
+            "minimum": 0
+        },
+        "_shuffle": {
+            "description": "FIXME",
+            "type": "number",
+            "minimum": 0
+        },
+        "_shufflePeriod": {
+            "description": "FIXME",
+            "type": "number",
+            "minimum": 0
+        },
+        "_noteJumpSpeed": {
+            "description": "FIXME",
+            "type": "number",
+            "minimum": 0
+        },
+        "_events": {
+            "description": "Array of events",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/event.schema.json"
+            }
+        },
+        "_notes": {
+            "description": "Array of notes",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/note.schema.json"
+            }
+        },
+        "_obstacles": {
+            "description": "Array of obstacles",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/obstacle.schema.json"
+            }
+        }
+    },
+    "required": [
+        "_version",
+        "_beatsPerMinute",
+        "_beatsPerBar",
+        "_shuffle",
+        "_shufflePeriod",
+        "_noteJumpSpeed",
+        "_notes"
+    ]
+}

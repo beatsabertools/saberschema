@@ -1,0 +1,125 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/note.schema.json",
+    "title": "Beat Saber Note",
+    "description": "Defines notes for the player to strike",
+    "type": "object",
+    "properties": {
+        "_lineLayer": {
+            "description": "Vertical/row of the note",
+            "type": "integer",
+            "anyOf": [
+                {
+                    "description": "Bottom row",
+                    "const": 0
+                },
+                {
+                    "description": "Middle row",
+                    "const": 1
+                },
+                {
+                    "description": "Top row",
+                    "const": 2
+                }
+            ]
+        },
+        "_lineIndex": {
+            "description": "Horizontal/column of the note",
+            "type": "integer",
+            "anyOf": [
+                {
+                    "description": "Left-most column",
+                    "const": 0
+                },
+                {
+                    "description": "Second-in column from left",
+                    "const": 1
+                },
+                {
+                    "description": "Middle column",
+                    "const": 2
+                },
+                {
+                    "description": "Second-in column from right",
+                    "const": 3
+                },
+                {
+                    "description": "Right-most column",
+                    "const": 4
+                }
+            ]
+        },
+        "_type": {
+            "description": "Type of the note",
+            "type": "integer",
+            "anyOf": [
+                {
+                    "description": "Red note",
+                    "const": 0
+                },
+                {
+                    "description": "Blue note",
+                    "const": 1
+                },
+                {
+                    "description": "Bomb",
+                    "const": 3
+                }
+            ]
+        },
+        "_time": {
+            "description": "Time note occurs (in seconds)",
+            "type": "number",
+            "minimum": 0
+        },
+        "_cutDirection": {
+            "description": "Direction note must be cut in",
+            "type": "integer",
+            "anyOf": [
+                {
+                    "description": "Cut bottom to top",
+                    "const": 0
+                },
+                {
+                    "description": "Cut top to bottom",
+                    "const": 1
+                },
+                {
+                    "description": "Cut left to right",
+                    "const": 2
+                },
+                {
+                    "description": "Cut right to left",
+                    "const": 3
+                },
+                {
+                    "description": "Cut bottom-right to top-left",
+                    "const": 4
+                },
+                {
+                    "description": "Cut bottom-left to top-right",
+                    "const": 5
+                },
+                {
+                    "description": "Cut top-right to bottom-left",
+                    "const": 6
+                },
+                {
+                    "description": "Cut top-left to bottom-right",
+                    "const": 7
+                },
+                {
+                    "description": "Cut any direction",
+                    "const": 8
+                }
+            ]
+        }
+    },
+    "required": [
+        "_lineLayer",
+        "_lineIndex",
+        "_type",
+        "_time",
+        "_cutDirection"
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/info.schema.json",
+    "title": "Beat Saber Song Info",
+    "description": "Defines metadata about the song and associated beatmaps",
+    "type": "object",
+    "properties": {
+        "songName": {
+            "description": "Name of the song",
+            "type": "string"
+        },
+        "songSubName": {
+            "description": "Subtitle of the song",
+            "type": "string"
+        },
+        "songAuthorName": {
+            "description": "Name of the song's artist",
+            "type": "string"
+        },
+        "beatsPerMinute": {
+            "description": "Beats per minute (BPM) of the song",
+            "type": "number",
+            "minimum": 0
+        },
+        "previewStartTime": {
+            "description": "Start time for song preview on song selection screen (in seconds)",
+            "type": "number",
+            "minimum": 0
+        },
+        "previewDuration": {
+            "description": "Time from the previewStartTime to play the preview (in seconds)",
+            "type": "number",
+            "minimum": 0
+        },
+        "audioPath": {
+            "description": "Path to audio file",
+            "type": "string"
+        },
+        "coverImagePath": {
+            "description": "Path to cover image (relative path)",
+            "type": "string"
+        },
+        "oneSaber": {
+            "description": "True/false to indicate if song is intended for One Saber mode",
+            "type": "boolean"  
+        },
+        "noteHitVolume": {
+            "description": "Volume of note hit sound effect",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+        },
+        "noteMissVolume": {
+            "description": "Volume of note miss sound effect",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+        },
+        "environmentName": {
+            "description": "Visual game environment to be used",
+            "type": "string",
+            "anyOf": [
+                {
+                    "description": "Default environment",
+                    "const": "DefaultEnvironment"
+                },
+                {
+                    "description": "Environment containing large mirror surfaces",
+                    "const": "BigMirrorEnvironment"
+                },
+                {
+                    "description": "Environment containing triangle object",
+                    "const": "TriangleEnvironment"
+                },
+                {
+                    "description": "'Nice' environment",
+                    "const": "NiceEnvironment"
+                }
+            ]
+        },
+        "difficultyLevels": {
+            "description": "Information about included difficulties",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/difficulty.schema.json"
+            }
+        }
+    },
+    "required": [
+        "songName",
+        "songSubName",
+        "songAuthorName",
+        "beatsPerMinute",
+        "previewStartTime",
+        "previewDuration",
+        "audioPath",
+        "coverImagePath",
+        "environmentName",
+        "difficultyLevels"
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/obstacle.schema.json",
+    "title": "Beat Saber Obstacle",
+    "description": "Defines obstacle segments of a beatmap",
+    "type": "object",
+    "properties": {
+        "_time": {
+            "description": "Time obstacle occurs (in seconds)",
+            "type": "number",
+            "minimum": 0
+        },
+        "_lineIndex": {
+            "description": "Horizontal/column of the obstacle",
+            "type": "integer",
+            "anyOf": [
+                {
+                    "description": "Left-most column",
+                    "const": 0
+                },
+                {
+                    "description": "Second-in column from left",
+                    "const": 1
+                },
+                {
+                    "description": "Middle column",
+                    "const": 2
+                },
+                {
+                    "description": "Second-in column from right",
+                    "const": 3
+                },
+                {
+                    "description": "Right-most column",
+                    "const": 4
+                }
+            ]
+        },
+        "_type": {
+            "description": "FIXME",
+            "type": "integer",
+            "minimum": 0
+        },
+        "_duration": {
+            "description": "Duration (length) of the obstacle (in seconds)",
+            "type": "number",
+            "minimum": 0
+        },
+        "_width": {
+            "description": "Width (number of columns) of the obstacle",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        }
+    },
+    "required": [
+        "_time",
+        "_lineIndex",
+        "_type",
+        "_duration",
+        "_width"
+    ]
+}
