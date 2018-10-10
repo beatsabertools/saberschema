@@ -24,7 +24,7 @@ namespace tests
 
             json = new JsonObject(new Dictionary<string, JsonValue>
             {
-                { "_version", new JsonValue(1.5) },
+                { "_version", new JsonValue("1.5.0") },
                 { "_beatsPerMinute", new JsonValue(0) },
                 { "_beatsPerBar", new JsonValue(0) },
                 { "_shuffle", new JsonValue(0) },
@@ -40,6 +40,28 @@ namespace tests
         public void Schema_IsValid()
         {
             schema.ValidateSchema();
+        }
+
+        [Theory]
+        [InlineData("1.5.0")]
+        public void Version_ValidValues_IsValid(string value)
+        {
+            json["_version"] = new JsonValue(value);
+
+            var result = schema.Validate(json);
+            Assert.True(result.IsValid);
+        }
+
+        [Theory]
+        [InlineData("1.0")]
+        [InlineData("1.3.0")]
+        [InlineData("foo")]
+        public void Version_InvalidValues_IsInvalid(string value)
+        {
+            json["_version"] = new JsonValue(value);
+
+            var result = schema.Validate(json);
+            Assert.False(result.IsValid);
         }
 
         [Fact]

@@ -11,3 +11,4 @@ and their expected values.
 
 - [Reaxt's Steam Community Guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1377190061)
 - [xyonico's BeatSaberSongLoader](https://github.com/xyonico/BeatSaberSongLoader)
+- [Beat Saber Modding Community Wiki](https://wiki.assistant.moe/)
