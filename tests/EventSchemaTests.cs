@@ -33,7 +33,8 @@ namespace tests
         [Fact]
         public void Schema_IsValid()
         {
-            schema.ValidateSchema();
+            var results = schema.ValidateSchema();
+            Assert.Empty(results);
         }
 
         [Fact]

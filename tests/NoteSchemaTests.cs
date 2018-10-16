@@ -34,7 +34,8 @@ namespace tests
         [Fact]
         public void ShouldBeValidSchema()
         {
-            schema.ValidateSchema();
+            var results = schema.ValidateSchema();
+            Assert.Empty(results);
         }
 
         [Theory]
