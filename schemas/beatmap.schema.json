@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/beatmap.schema.json",
+    "$id": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/beatmap.schema.json",
     "title": "Beat Saber Beatmap",
     "description": "A beatmap definition for a song at a particular difficulty",
     "type": "object",
@@ -44,21 +44,21 @@
             "description": "Array of events",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/event.schema.json"
+                "$ref": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/event.schema.json"
             }
         },
         "_notes": {
             "description": "Array of notes",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/note.schema.json"
+                "$ref": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/note.schema.json"
             }
         },
         "_obstacles": {
             "description": "Array of obstacles",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/obstacle.schema.json"
+                "$ref": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/obstacle.schema.json"
             }
         }
     },

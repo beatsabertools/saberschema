@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/info.schema.json",
+    "$id": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/info.schema.json",
     "title": "Beat Saber Song Info",
     "description": "Defines metadata about the song and associated beatmaps",
     "type": "object",
@@ -42,7 +42,7 @@
         },
         "oneSaber": {
             "description": "True/false to indicate if song is intended for One Saber mode",
-            "type": "boolean"  
+            "type": "boolean"
         },
         "noteHitVolume": {
             "description": "Volume of note hit sound effect",
@@ -82,7 +82,7 @@
             "description": "Information about included difficulties",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/difficulty.schema.json"
+                "$ref": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/difficulty.schema.json"
             }
         }
     },

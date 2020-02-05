@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/obstacle.schema.json",
+    "$id": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/obstacle.schema.json",
     "title": "Beat Saber Obstacle",
     "description": "Defines obstacle segments of a beatmap",
     "type": "object",
@@ -53,11 +53,5 @@
             "maximum": 4
         }
     },
-    "required": [
-        "_time",
-        "_lineIndex",
-        "_type",
-        "_duration",
-        "_width"
-    ]
+    "required": ["_time", "_lineIndex", "_type", "_duration", "_width"]
 }

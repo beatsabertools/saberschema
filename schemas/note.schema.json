@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/note.schema.json",
+    "$id": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/note.schema.json",
     "title": "Beat Saber Note",
     "description": "Defines notes for the player to strike",
     "type": "object",
@@ -115,11 +115,5 @@
             ]
         }
     },
-    "required": [
-        "_lineLayer",
-        "_lineIndex",
-        "_type",
-        "_time",
-        "_cutDirection"
-    ]
+    "required": ["_lineLayer", "_lineIndex", "_type", "_time", "_cutDirection"]
 }

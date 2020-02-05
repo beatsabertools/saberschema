@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/event.schema.json",
+    "$id": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/event.schema.json",
     "title": "Beat Saber Event",
     "description": "Defines lighting and stage change events",
     "type": "object",
@@ -83,9 +83,5 @@
             ]
         }
     },
-    "required": [
-        "_time",
-        "_type",
-        "_value"
-    ]
+    "required": ["_time", "_type", "_value"]
 }

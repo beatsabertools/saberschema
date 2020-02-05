@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/ryanwersal/saberschema/master/schemas/difficulty.schema.json",
+    "$id": "https://raw.githubusercontent.com/beatsabertools/saberschema/master/schemas/difficulty.schema.json",
     "title": "Beat Saber Difficulty",
     "description": "Difficulty details for a song and beatmap",
     "type": "object",
@@ -62,9 +62,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "difficulty",
-        "difficultyRank",
-        "jsonPath"
-    ]
+    "required": ["difficulty", "difficultyRank", "jsonPath"]
 }
